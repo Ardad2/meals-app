@@ -1,5 +1,4 @@
-import { isTSEnumDeclaration } from 'babel-types';
-import { Flatlist } from 'react-native';
+import { FlatList } from 'react-native';
 import CategoryGridTile from '../components/CategoryGridTile';
 
 import { CATEGORIES } from '../data/dummy-data';
@@ -14,6 +13,7 @@ function CategoriesScreen() {
     data={CATEGORIES} 
     keyExtractor={(item) => item.id} 
     renderItem={renderCategoryItem}
+    numColumns={2}
     />
     );
 }
